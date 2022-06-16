@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Gentium+Plus&display=swap"    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Gentium+Plus&family=Joan&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Document</title>
@@ -14,21 +14,28 @@
 <body>
 
     <div class="bg-img">
-        <!-- <img src="#../../../code/front-end/astronaut.jpeg" alt="astronaut"> -->
+        <img src="../../../code/front-end/gold-retriever.jpeg" alt="astronaut">
     </div>
 
-    <div id="logo">
-        <!-- <header id="logo-text">Space Travel</header> -->
+    <div id="background-color"></div>
+    
+    <div class="logo-container">
+        <div>
+            <img src="../../../code/front-end/odin-logo.png" alt="odin logo">
+        </div>
+        <div>
+            <header id="logo-text">The Odin Project</header>
+        </div>
     </div>
     
     <div class="container">
         <div id="para">
             <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>
-            <span>Sign up <em>now</em> to get started.</span></br>
+            Sign up <span class="emph">now</span> to get started.</br>
             <br>
-            You <em>know</em> you want to.</p>
-
+            You <span class="emph">know</span> you want to.</p>
         </div>
+
         <div id="form">
             <form action="#">
                 <fieldset required="">
@@ -36,13 +43,13 @@
                     <div class="section-container">
                         <div id="section-1">
                             <label for="first-name">FIRST NAME</label>
-                            <input type="text" name="first-name" id="first-name">
+                            <input type="text" name="first-name" id="first-name" required>
     
                             <label for="email">EMAIL</label>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" required>
 
                             <label for="password">PASSWORD</label>
-                            <input type="password" name="password" id="password">
+                            <input class="error" type="password" name="password" id="password">
                         </div>
                         
                         <div id="section-2">
@@ -53,19 +60,21 @@
                             <input type="tel" name="phone-num" id="phone-num">
 
                             <label for="c-password">CONFIRM PASSWORD</label>
-                            <input type="password" name="c-password" id="p-password">
+                            <input class="error" type="password" name="c-password" id="p-password">
                         </div>
                     </div>
                 </fieldset>    
             </form>
         </div>
         <div id="create-account">
-            <input type="submit" value="create-account">
+            <input type="submit" value="create account">
         </div>
         <div id="log-in">
-            <p>Already have an account? <span>Log in</span></p>
+            <p>Already have an account? <a href="#">Log in</a></p>
         </div>
         
+        
+
     </div>
 
 
