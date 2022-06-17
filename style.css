@@ -103,7 +103,7 @@ div.bg-img img {
 }
 
 .container {
-    height: 100vh;
+    height: 100%;
     position: absolute;
     left: 37%;
     background: rgb(239, 239, 239);
@@ -115,9 +115,10 @@ div.bg-img img {
 
 #para > p,
 legend {
-    line-height: 22px;
+    line-height: 30px;
+    letter-spacing: .1rem;
     padding:120px 110px 45px 30px;   
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     font-weight: 900;
 }
 
