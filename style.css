@@ -160,7 +160,7 @@ label {margin-bottom: -4px;}
 #section-1,
 #section-2 {float: left;}
 
-input[type=submit] {
+button {
     height: 2.5rem;
     max-width: 10rem;
     width: 100%;
