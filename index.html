@@ -6,15 +6,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
 	<script src="javascript.js" defer="defer"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Gentium+Plus&family=Joan&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Gentium+Plus&family=Righteous&family=Satisfy&display=swap" rel="stylesheet">
 	<title>Document</title>
 </head>
 <body>
 	
 	<div class="container">
 		<!-- Section for the logo and header area. -->
+		<div class="hero-div"></div>
+
 		<div class="logo-section">
 			<div id="logo-img">
 				<img src="odin-logo.png" alt="odin logo">
@@ -37,7 +39,7 @@
 
 			<!-- Sign up form section. -->
 			<div id="form-section-2">
-				<form action="#" method="get">
+				<form action="#" id="sign-up">
 					<div id="form-text">
 						<p>Let's do this!</p>
 					</div>
@@ -52,29 +54,32 @@
 						</div>
 						<div id="email">
 							<label for="email">Email</label>
-							<input type="email" name="email" id="email">
+							<input type="email" name="email" id="email" required>
 						</div>
 						<div id="pn">
 							<label for="phone-number">Phone Number</label>
-							<input type="tel" name="phone-number" id="phone-number">
+							<input type="tel" name="phone-number" id="phone-number" required>
 						</div>
 						<div id="pw">
 							<label for="passwore">Password</label>
-							<input type="password" name="password" id="password">
+							<input type="password" name="password" id="password" required>
 						</div>
 						<div id="cpw">
 							<label for="confirm-password">Confirm Password</label>
-							<input type="password" name="confirm-password" id="confirm-password">
+							<input type="password" name="confirm-password" id="confirm-password" required>
 						</div>
+
 					</div>
 				</form>
 			</div>
 
 			<!-- Submit button section. -->
 			<div id="form-section-3">
-				<div id="submit-button">
-					<button type="submit">Create Account</button>
-				</div>
+				<form action="">
+					<div id="submit-button">
+						<button type="submit" form="sign-up">Create Account</button>
+					</div>
+				</form>
 				<div id="log-in">
 					<p>Already have an account? <span id="log-in-text">Log in</span></p>
 				</div>

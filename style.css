@@ -41,6 +41,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* End of Meyers Reset Method. */
+
+
+/* 
+Notes:
+Use vh, vw for dynamic text based on responsive screen size.
+ */
 
 
 
@@ -51,164 +58,194 @@ table {
 
 
 
-
-
-
-
-/* End of Meyers Reset Method */
-* {
+:root {
     box-sizing: border-box;
+    font-family: 'Righteous', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
 }
+
 html {
-    background: url(../../../code/front-end/galaxy.png) no-repeat center center fixed;
+    background: url("galaxy.png") no-repeat center center fixed;
     background-size: cover;
+    height: 100vh;
+    width: 100vw;
 }
+
 body {
-    font-family:'Joan', Courier, monospace;
-    max-width: fit-content;
-
+    height: 100vh;
+    width: 100vw;
 }
 
-div.bg-img img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+.hero-div {
+    /* height: 10rem; */
+    /* width: 100%; */
+    height: 15rem;
+    width: 100vw;
+    position: fixed;
     z-index: -1;
+    top: 40%;
+    background-color: rgb(72, 72, 72);
+    opacity: 0.5;
 }
 
-
-.logo-container img {
-    width: 6rem;
-    height: 8rem;
-    margin-left: 1.5rem;
-}
-
-.logo-container header {
-    color: white;
-    font-size: 3rem;
-    margin-left: 1.2rem;
-    margin-right: 1.2rem;
-}
-
-.logo-container {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+#logo-img img {
     position: absolute;
-    top: 170px;
-    background: black;
-    opacity: 0.65;
-    width: 37%;
-    height: 150px;
+    width: 7rem;
+    height: 9rem;
+    top: 45%;
+    left: 3%;
+}
+
+#logo-header header {
+    width: 100%;
+    position: absolute;
+    top: 53%;
+    left: 10rem;
+    font-size: 1.9rem;
+    color: white;
+    margin-right: 20px;
 }
 
 .container {
+    display: flex;
     height: 100%;
-    position: absolute;
-    left: 37%;
-    background: rgb(239, 239, 239);
-    opacity: .96;
-    z-index: 999;
+    height: 100vh;
 }
 
-.emph {font-style: italic;}
-
-#para > p,
-legend {
-    line-height: 30px;
-    letter-spacing: .1rem;
-    padding:120px 110px 45px 30px;   
-    font-size: 1.7rem;
-    font-weight: 900;
+.form-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: calc(25vw + 11rem);
 }
 
-legend {padding: 20px 0 20px 30px;}
+#form-section-1,
+#form-section-2,
+#form-section-3 {
+    padding: 0 3rem 3rem 2rem;
+}
+
+#form-section-1 {
+    padding-top: 8rem;
+    box-shadow: 0 8px 6px -6px rgb(54, 54, 54);
+}
+
+#form-section-1 p,
+#form-section-2 p {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+#form-section-1, 
+#form-section-3 {
+    background: rgb(238, 252, 255);
+    height: 100vh;
+    opacity: 0.8;
+}
+
+#form-section-2 {
+    margin-top: 0.3rem;
+    box-shadow: 0 8px 6px -6px rgb(54, 54, 54);
+    background: rgb(250, 250, 250);
+}
+
+#form-text {
+    margin-top: .5rem;
+}
+
+#sign-up-form {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 1.5rem;
+
+}
 
 input {
-    width: 12rem;
-    padding: 5px;
-    margin: 5px 0 20px;
-    border: 1px solid rgb(210, 210, 210);
-    border-radius: 3px;
-    box-shadow: 3px 2px 1px rgb(230, 230, 230);
-    cursor: pointer;
+    display: block;
+    width: 22rem;
+    height: 1.3rem;
+    padding: .15rem;
+    margin: 0 3rem 1rem 0;
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 5px;
+    box-shadow: 0 8px 6px -6px rgb(54, 54, 54);
 }
-
-label::after {content: " *";}
 
 input:focus {
     outline: none;
     border-color: rgb(88, 88, 255);
-    box-shadow: 0 0 5px rgb(88, 88, 255);
+    box-shadow: 0 5px 5px rgb(88, 88, 255);
 }
 
-label, input {
+label {
     display: block;
-    font-size: 10px;
-    margin-left: 30px;
-    letter-spacing: .8px;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.03rem;
+    text-transform: uppercase;
+    font-size: 0.7rem;
 }
 
-label {margin-bottom: -4px;}
+label:after {
+    content: " *";
+}
 
-#form {
-    background: rgb(251, 251, 251);
+#form-section-3 {
+    margin-top: 0.3rem;
+}
+
+#form-section-3 button,
+#form-section-3 p {
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+#submit-button button {
+    background-color: rgb(13, 180, 144);
+    border: 1px solid rgb(119, 119, 119);
+    border-radius: 7px;
+    padding: 0.5rem;
+    color: white;
     box-shadow: 0 8px 6px -6px rgb(54, 54, 54);
 }
 
-/* Think about implementing flexbox - wrap feature instead. */
-#section-1,
-#section-2 {float: left;}
-
-button {
-    height: 2.5rem;
-    max-width: 10rem;
-    width: 100%;
-    margin: 20px 0 25px 30px;
-    background: rgb(41, 175, 126);
-    box-shadow: 0 7px 8px -6px rgb(41, 175, 126);
-    color: white;
-    font-size: 0.9rem;
-    border-radius: 7px;
-    text-transform: capitalize;
+#form-section-3 #log-in {
+    margin-top: 5rem;
 }
 
-#log-in > p {
-    margin-left: 30px;
-    font-size: 1rem;
-    font-weight: 300;
-    opacity: 0.6;
-}
-#log-in a {
-    text-decoration: none;
-    color: green;
+#form-section-3 p span {
+    color: rgb(13, 180, 144);
 }
 
-@media only screen and (max-width: 850px) {
+#submit-button button,
+#log-in #log-in-text {
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 800px) {
+    #logo-img img{
+        position: absolute;
+        top: 0;
+        left: 20%;
+        margin-top: 0.3rem;
+        height: 9vh;
+        width: 5.5rem;
+
+    }
+    #logo-header header {
+        position: absolute;
+        top: 0.5%;
+        left: 40%;
+        margin-top: 2rem;
+        font-size: 2rem;
+        color: white;
+        white-space: nowrap;
+    }
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 10vh;
+    }
     .container {
-        position: static;
-        opacity: .75;
-        background-size: cover;
-        width: 100vw;
-        height: 100vh;
-    }
-    div.logo-container {
-        position: static;
-        width: 100vw;
-        height: 5rem;
-        background-color: black;
-        justify-content: center;
-        align-items: center;
-    }
-    div.logo-container img {
-        height: 3.9rem;
-        width: 3.5rem;
-    }
-    div.logo-container header {
-        font-size: 1.5rem;
-    }
-    div.container #para {
-        background: none;
-        margin-top: 0;
+        width: 100%;
     }
 }
