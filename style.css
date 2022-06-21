@@ -59,63 +59,60 @@ Use vh, vw for dynamic text based on responsive screen size.
 
 
 :root {
-    box-sizing: border-box;
     font-family: 'Righteous', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 400;
 }
 
-html {
+body {
+    box-sizing: border-box;
     background: url("galaxy.png") no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
-}
-
-body {
-    height: 100vh;
-    width: 100vw;
+    height: 95vh;
+    width: 95vw;
 }
 
 .hero-div {
-    /* height: 10rem; */
-    /* width: 100%; */
     height: 15rem;
-    width: 100vw;
-    position: fixed;
-    z-index: -1;
-    top: 40%;
-    background-color: rgb(72, 72, 72);
+    background-color: rgb(221, 163, 255);
     opacity: 0.5;
+    position: absolute;
+    z-index: -1;
+    top: 36vh;
+    width: 100%;
+}
+
+.logo-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    left: 20px;
 }
 
 #logo-img img {
-    position: absolute;
+    position: relative;
     width: 7rem;
     height: 9rem;
-    top: 45%;
-    left: 3%;
+    margin-left: 20px;
 }
 
 #logo-header header {
-    width: 100%;
-    position: absolute;
-    top: 53%;
-    left: 10rem;
-    font-size: 1.9rem;
+    position: relative;
+    font-size: 2.9rem;
     color: white;
     margin-right: 20px;
 }
 
 .container {
     display: flex;
-    height: 100%;
-    height: 100vh;
+    width: 100vw;
 }
 
 .form-section {
     display: flex;
     flex-direction: column;
-    margin-left: calc(25vw + 11rem);
+    max-width: 65vw;
 }
 
 #form-section-1,
@@ -125,45 +122,58 @@ body {
 }
 
 #form-section-1 {
-    padding-top: 8rem;
-    box-shadow: 0 8px 6px -6px rgb(54, 54, 54);
+    padding-top: 5vh;
+    box-shadow: 0 15px 6px -6px rgb(54, 54, 54);
+    position: relative;
+    z-index: 99;
+}
+
+#form-section-1,
+#form-section-2 {
+    height: 30vh;
 }
 
 #form-section-1 p,
 #form-section-2 p {
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 2rem;
+    margin-top: 2rem;
+    overflow: hidden;
 }
 #form-section-1, 
 #form-section-3 {
-    background: rgb(238, 252, 255);
-    height: 100vh;
-    opacity: 0.8;
+    background: rgb(221, 235, 237);
+    opacity: 0.9;
 }
 
 #form-section-2 {
-    margin-top: 0.3rem;
-    box-shadow: 0 8px 6px -6px rgb(54, 54, 54);
-    background: rgb(250, 250, 250);
-}
-
-#form-text {
-    margin-top: .5rem;
+    box-shadow: 0 15px 6px -6px rgb(54, 54, 54);
+    background: rgb(245, 245, 245);
+    height: 31.5vh;
+    overflow: hidden;
+    margin-top: 0.1rem;
+    position: relative;
+    z-index: 9;
 }
 
 #sign-up-form {
     display: flex;
-    flex-flow: row wrap;
-    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.8vh;
+    gap: 5px;
+}
 
+#sign-up-form > div {
+    margin-top: 1vh;
+    max-height: 100%;
 }
 
 input {
     display: block;
-    width: 22rem;
-    height: 1.3rem;
-    padding: .15rem;
-    margin: 0 3rem 1rem 0;
+    width: 17vw;
+    height: 2.3vh;
+    padding: .15rem 1rem;
+    margin: 0 1rem 1rem 0;
     border: 1px solid rgb(199, 199, 199);
     border-radius: 5px;
     box-shadow: 0 8px 6px -6px rgb(54, 54, 54);
@@ -177,7 +187,7 @@ input:focus {
 
 label {
     display: block;
-    margin-bottom: 0.25rem;
+    padding-bottom: 0.25rem;
     letter-spacing: 0.03rem;
     text-transform: uppercase;
     font-size: 0.7rem;
@@ -188,7 +198,7 @@ label:after {
 }
 
 #form-section-3 {
-    margin-top: 0.3rem;
+    margin-top: 0.1rem;
 }
 
 #form-section-3 button,
@@ -201,13 +211,13 @@ label:after {
     background-color: rgb(13, 180, 144);
     border: 1px solid rgb(119, 119, 119);
     border-radius: 7px;
-    padding: 0.5rem;
+    padding: 0.8rem;
     color: white;
     box-shadow: 0 8px 6px -6px rgb(54, 54, 54);
 }
 
 #form-section-3 #log-in {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 #form-section-3 p span {
@@ -221,31 +231,84 @@ label:after {
 
 
 @media screen and (max-width: 800px) {
-    #logo-img img{
-        position: absolute;
-        top: 0;
-        left: 20%;
-        margin-top: 0.3rem;
-        height: 9vh;
-        width: 5.5rem;
-
+    * {
+        box-sizing: border-box;
     }
-    #logo-header header {
-        position: absolute;
-        top: 0.5%;
-        left: 40%;
-        margin-top: 2rem;
-        font-size: 2rem;
-        color: white;
-        white-space: nowrap;
-    }
-    .form-section {
-        display: flex;
-        flex-direction: column;
-        margin-left: 0;
-        margin-top: 10vh;
+    body {
+        width: 100%;
+        height: 100%;
     }
     .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    .logo-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -4rem;
+    }
+    .hero-div {
+        height: 9vh;
+        background-color: black;
+        opacity: 0.7;
+        position: absolute;
+        z-index: -999;
+        width: 100%;
+        top: 0;
+    }
+    #logo-img img {
+        width: 4rem;
+        height: 4.7rem;
+    }
+    .form-section {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    #form-section-1 p,
+    #form-section-2 p {
+        display: block;
+        text-align: center;
+        font-size: 3.3vw;
+        line-height: 1.2rem;
+        overflow: hidden;
+        margin: -10px 0;
+        height: 100%;
+    }
+    #form-section-1,
+    #form-section-3 {
+        height: 25vh;
         width: 100%;
     }
+    #form-section-2 {
+        height: 30vh;
+        width: 100%;
+        padding-top: 1rem;
+        overflow: hidden;
+    }
+    #sign-up-form {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+        margin-left: 1rem;
+    }
+    #form-text {
+        margin-top: 1rem;
+    }
+    input {
+        width: 20vw;
+        height: 2.6vh;
+        margin: 0.2rem 0;
+        padding-left: 0.5rem;
+        font-size: 0.7rem;
+    }
+    label {
+        font-size: 1.5vw;
+    }
+
 }
