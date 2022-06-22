@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
-	<script src="javascript.js" defer="defer"></script>
+	<script src="script.js" defer="defer"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Gentium+Plus&family=Righteous&family=Satisfy&display=swap" rel="stylesheet">
@@ -39,38 +39,45 @@
 
 			<!-- Sign up form section. -->
 			<div id="form-section-2">
-				<form action="#" id="sign-up">
-					<div id="form-text">
-						<p>Let's do this!</p>
+				
+				<div id="form-text">
+					<p>Let's do this!</p>
+				</div>
+				
+				<form action="#" id="sign-up form">
+					<div id="sign-up-form">
+						<div class="input-control">
+							<label for="first-name">First Name</label>
+							<input type="text" name="first-name" id="first-name" >
+							<div class="error"></div>
+						</div>
+						<div class="input-control">
+							<label for="last-name">Last Name</label>
+							<input type="text" name="last-name" id="last-name" >
+							<div class="error"></div>
+						</div>
+						<div class="input-control">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" >
+							<div class="error"></div>
+						</div>
+						<div class="input-control">
+							<label for="phone-number">Phone Number</label>
+							<input type="tel" name="phone-number" id="phone-number" minlength="9" pattern="\d{3}[\-]\d{3}[\-]\d{4}" >
+							<div class="error"></div>
+						</div>
+						<div class="input-control">
+							<label for="password">Password</label>
+							<input type="password" name="password" id="password" >
+							<div class="error" id="password-error"></div>
+						</div>
+						<div class="input-control">
+							<label for="confirm-password">Confirm Password</label>
+							<input type="password" name="confirm-password" id="confirm-password" >
+							<div class="error" id="confirm-password-error"></div>
+						</div>
 					</div>
 
-					<div id="sign-up-form">
-						<div id="fn">
-							<label for="first-name">First Name</label>
-							<input type="text" name="first-name" id="first-name" required>
-						</div>
-						<div id="ln">
-							<label for="last-name">Last Name</label>
-							<input type="text" name="last-name" id="last-name" required>
-						</div>
-						<div id="email">
-							<label for="email">Email</label>
-							<input type="email" name="email" id="email" required>
-						</div>
-						<div id="pn">
-							<label for="phone-number">Phone Number</label>
-							<input type="tel" name="phone-number" id="phone-number" required>
-						</div>
-						<div id="pw">
-							<label for="passwore">Password</label>
-							<input type="password" name="password" id="password" required>
-						</div>
-						<div id="cpw">
-							<label for="confirm-password">Confirm Password</label>
-							<input type="password" name="confirm-password" id="confirm-password" required>
-						</div>
-					</div>
-					
 				</form>
 			</div>
 
@@ -78,7 +85,7 @@
 			<div id="form-section-3">
 				<form action="">
 					<div id="submit-button">
-						<button type="submit" form="sign-up">Create Account</button>
+						<button type="submit" form="sign-up form">Create Account</button>
 					</div>
 				</form>
 				<div id="log-in">
